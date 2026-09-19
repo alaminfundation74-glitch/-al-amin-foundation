@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - আল-আমীন ফাউন্ডেশন</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="admin-page">
+  <div class="login-card" id="loginBox">
+    <h1>🔐 Admin Login</h1>
+    <p>প্রথম ধাপের ডেমো লগইন</p>
+    <input id="username" type="text" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+    <button class="button full" onclick="login()">Login</button>
+    <p id="loginMsg" class="error"></p>
+    <a href="index.html">← ওয়েবসাইটে ফিরে যান</a>
+  </div>
+
+  <div class="admin-card hidden" id="dashboard">
+    <div class="admin-head">
+      <div>
+        <h1>Admin Dashboard</h1>
+        <p>আল-আমীন ফাউন্ডেশন</p>
+      </div>
+      <button class="logout" onclick="logout()">Logout</button>
+    </div>
+
+    <label>মোট মূলধন</label>
+    <input id="capitalInput" type="number" min="0">
+
+    <label>মোট লভ্যাংশ</label>
+    <input id="profitInput" type="number" min="0">
+
+    <label>মোট ঋণ</label>
+    <input id="loanInput" type="number" min="0">
+
+    <button class="button full" onclick="saveData()">💾 হিসাব সংরক্ষণ</button>
+    <p id="saveMsg" class="success"></p>
+
+    <a href="index.html">← ওয়েবসাইট দেখুন</a>
+  </div>
+</main>
+<script src="admin.js"></script>
+</body>
+</html>
